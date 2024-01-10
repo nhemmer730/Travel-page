@@ -2,7 +2,7 @@ body {
   font-family: "brioso-pro", serif;
   font-weight: 400;
   font-style: normal;
-  background: rgb(236, 207, 123);
+  background: rgb(241, 218, 149);
 }
 
 .container {
@@ -12,8 +12,22 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr;
   grid-gap: 64px;
+}
+
+.grid-2-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-3-columns {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+}
+
+.img-responsive {
+  max-width: 80%;
+  margin: 20px 0;
 }
 
 header {
@@ -37,7 +51,7 @@ header h2 {
   font-size: 36px;
   font-weight: 400;
   line-height: 1.5;
-  margin: 0;
+  padding: 20px;
 }
 
 header h3 {
@@ -49,18 +63,36 @@ header h3 {
 }
 
 header a {
-  font-weight: 700;
   font-size: 14px;
+  font-weight: 700;
   line-height: 1.5;
+  margin-top: 32px;
+  letter-spacing: 3px;
+  padding: 16px 32px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   background: white;
-  letter-spacing: 3px;
   color: #272044;
   display: inline-block;
-  margin-top: 32px;
-  padding: 16px 32px;
+}
+
+main {
+  padding: 50px;
+}
+
+main h2 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+main p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 section {
@@ -69,7 +101,7 @@ section {
 }
 
 footer {
-  color: white;
+  color: rgb(243, 239, 239);
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("../images/aqueduct.jpeg");
   background-size: cover;
@@ -80,6 +112,7 @@ footer {
 
 footer h3 {
   line-height: 1.5;
+  margin: 15px;
 }
 
 footer p {
@@ -87,10 +120,12 @@ footer p {
   font-size: 16px;
   opacity: 0.7;
   line-height: 1.5;
+  margin: 15px;
 }
 
 footer ul {
   padding: 0;
+  margin: 15px;
 }
 
 footer a {
@@ -100,13 +135,13 @@ footer a {
 
 footer li {
   list-style: none;
-  margin: 0;
   padding: 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1064px) {
   header {
-    padding: 30px 0;
+    padding: 40px 0;
+    max-width: 100%;
   }
 
   header h1 {
@@ -119,6 +154,25 @@ footer li {
 
   header h3 {
     font-size: 12px;
+  }
+
+  .img-responsive {
+    max-width: 85%;
+    margin-right: 20px;
+  }
+
+  .grid-2-columns {
+    grid-template-columns: 1fr;
+    grid-gap: 12px;
+  }
+
+  .grid-3-columns {
+    grid-template-columns: 1fr;
+    grid-gap: 12px;
+  }
+
+  section {
+    padding: 30px;
   }
 
   footer {
