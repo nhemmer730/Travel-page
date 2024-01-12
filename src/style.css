@@ -21,13 +21,39 @@ body {
 }
 
 .grid-3-columns {
-  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-3-columns-with-first-narrow {
   grid-template-columns: 1fr 2fr 2fr;
 }
 
 .img-responsive {
-  max-width: 80%;
-  margin: 20px 0;
+  display: block;
+  max-width: 100%;
+}
+
+.card {
+  background: white;
+  margin: 30px 0;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.btn {
+  display: block;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px;
+  background-color: #d1ac08;
+  text-decoration: none;
 }
 
 header {
@@ -37,7 +63,7 @@ header {
   color: white;
   text-align: center;
   padding: 260px;
-  max-width: 800px;
+  max-width: 1200px;
 }
 
 header h1 {
@@ -96,16 +122,23 @@ main p {
 }
 
 section {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
+  padding: 100px;
+}
+
+.text-center {
+  text-align: center;
 }
 
 footer {
   color: rgb(243, 239, 239);
+  font-weight: 600;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("../images/aqueduct.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
+  max-width: 100%;
   padding: 80px 20px;
   margin: 20px 0;
 }
@@ -162,13 +195,16 @@ footer li {
   }
 
   .grid-2-columns {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 12px;
   }
 
   .grid-3-columns {
-    grid-template-columns: 1fr;
-    grid-gap: 12px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .grid-3-columns-with-first-narrow {
+    grid-template-columns: 1fr 2fr 2fr;
   }
 
   section {
