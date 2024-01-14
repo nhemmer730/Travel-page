@@ -29,7 +29,7 @@ body {
 
 .grid {
   display: grid;
-  column-gap: 64px;
+  column-gap: 60px;
 }
 
 .grid-2-columns-with-border {
@@ -44,6 +44,7 @@ body {
 .grid-2-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  column-gap: 0;
 }
 
 .grid-3-columns {
@@ -55,7 +56,8 @@ body {
 }
 
 .img-responsive {
-  width: 100%;
+  width: 225px;
+  height: 150px;
   display: block;
 }
 
@@ -71,8 +73,8 @@ body {
 }
 
 .embed {
-  width: 100%;
-  aspect-ratio: 1/1;
+  width: 150px;
+  height: 150px;
 }
 
 .card-header .grid {
